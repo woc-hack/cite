@@ -1,6 +1,48 @@
 # Extracting mentions of publications in WoC
 
-### Top
+
+Quite a bit of research has been conducted on identifying software
+cited or mentioned in research publications.  Since software projects
+are not required to cite related research, most software projects in
+OSS don't mention any research publication. We investigated the
+practice of citing research publications in OSS by using World of Code
+infrastructure to identify all instances where a research publication
+was mentioned in all version of all files matching a certain filename
+pattern. Among the objectives we had was to identify a reference to a
+paper that is mentioned in the largest number of software
+projects. The intent was to capture one aspect of the paper's
+influence on software projects.
+
+Two radically different papers topped our list. The first paper
+"Levine J. Coordinated Universal Time and the leap second. URSI Radio Sci Bull. 2016;89(4):30-6.
+doi:10.23919/URSIRSB.2016.7909995" was in 55,034 distinct repositories, but only three versions
+of the file citing it exist. In this case the reference was widely spread because it was in
+a python package pytz that was widely installed (and checked in).
+
+The second paper: "Orchestrating high-throughput genomic analysis with
+Bioconductor" doi://10.1038/nmeth.3252 was mentioned in 27774 projects
+with 55806 distinct versions. In this case, the paper was describing
+bioconductor package manager (an alternative to the standard CRAN
+package manager used for R language).
+The total number of repositories once deforked was only 43 as one repository
+was forked overe 24K times.
+
+
+The first paper had only one paper in semanticscolar that cited it,
+while the second had thousands of citations.
+These findings suggest that it the impact a paper has on software may require carefully designed multi-dimensional
+measures that quantify differet types of impact.       
+
+
+#### Details
+
+We looked for keywords zenodo|doi|article|proceedings|journal|conference in the content of all version of
+files that contained readme|citation|bibliography in their pathname.
+
+Projects were deforked to avoid counting the same file in multiple forks.
+
+
+### Top papers
 ```
 # find most widely spread doi
 ```
