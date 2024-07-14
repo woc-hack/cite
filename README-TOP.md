@@ -196,6 +196,33 @@ cut -d\; -f1 bio.P2p | uniq -c
       1 xiaoyaoziyao_msc_project
 
 ```
+# what are these forks?
+```
+grep gcushen_hugo-academic bio.P2p |head    
+gcushen_hugo-academic;0405skills_startbootstrap-landing-page
+gcushen_hugo-academic;0527zhangjinyuan_Personal-Website
+gcushen_hugo-academic;0527zhangjinyuan_academic-kickstart
+gcushen_hugo-academic;0623tzou_xlab-website
+gcushen_hugo-academic;0g3_web
+gcushen_hugo-academic;0nanasaki0_starter-academic
+gcushen_hugo-academic;0range2866_academic-kickstart
+gcushen_hugo-academic;0seastar0_starter-academic
+gcushen_hugo-academic;0x033c_zlab
+gcushen_hugo-academic;0x13A0F_blog
+```
+# what kinds of forks?
+```
+grep gcushen_hugo-academic bio.P2p | cut -d\; -f2 | cut -d_ -f2- | sort | uniq -c | sort -rn|head
+   6258 academic-kickstart
+   2442 starter-academic
+   1409 starter-hugo-academic
+   1335 startbootstrap-landing-page
+   1154 hugo-academic
+    646 airspace-jekyll
+    442 website
+    321 academic-website
+    291 starter-hugo-research-group
+```
 
 # What are these papers?
 ```
